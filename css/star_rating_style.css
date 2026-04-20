@@ -1,0 +1,94 @@
+/* تحسين شكل الصفحة العام */
+body {
+    /* لون خلفية مريح للعين */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* تحويل الحاوية إلى "بطاقة" (Card) احترافية */
+.rating-container {
+    background: #ffffff;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* ظل ناعم خلف البطاقة */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: ltr;
+}
+
+.rating-container h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* تنسيق النجوم */
+.star {
+    font-size: 60px;
+    /* تكبير الحجم قليلاً */
+    cursor: pointer;
+    color: #e0e0e0;
+    /* رمادي أفتح وأنظف */
+    display: inline-block;
+    transition: all 0.2s ease;
+    /* تنعيم كل الحركات */
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.05));
+    /* ظل خفيف تحت النجمة */
+}
+
+/* تأثير عند مرور الماوس */
+.star:hover {
+    transform: scale(1.2) rotate(5deg);
+    /* تكبير مع ميلة بسيطة تعطي حيوية */
+}
+
+/* النجمة الذهبية بالكامل مع تأثير التوهج */
+.star.filled {
+    color: #ffb800;
+    /* ذهبي أكثر إشراقاً */
+    filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.4));
+    /* توهج ذهبي */
+}
+
+/* نصف النجمة مع دمج احترافي */
+.star.half-filled {
+    background: linear-gradient(90deg, #ffb800 50%, #e0e0e0 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px rgba(255, 184, 0, 0.2));
+}
+
+/* تنسيق النص ليظهر كـ "شارة" (Badge) */
+#rating-text {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #2c3e50;
+    /* خلفية داكنة للنص */
+    padding: 8px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    min-width: 120px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+/* تغيير لون خلفية النص بناءً على الحالة (اختياري عبر JS) */
+.excellent-bg {
+    background: #27ae60 !important;
+}
+
+/* أخضر للممتاز */
+.poor-bg {
+    background: #e74c3c !important;
+}
+
+/* أحمر للسيئ */
+.good{
+        background: #ffb800 !important;
+}

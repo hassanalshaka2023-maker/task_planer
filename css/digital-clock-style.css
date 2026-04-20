@@ -1,0 +1,69 @@
+
+  body {
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f172a; /* dark blue */
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+
+  .digital-clock {
+    background: #020617;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 30px aqua;
+  }
+
+  .digital-clock h2 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+  }
+
+  #clock {
+    display: block;
+    font-size: 60px;
+    letter-spacing: 3px;
+    margin: 20px 0;
+    color: #22c55e;
+    font-weight: bold;
+  }
+
+  input[type="time"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    background: #1e293b;
+    color: white;
+  }
+
+  button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  button:hover {
+    background: #0ea5e9;
+  }
+
+#miku{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+video{
+    border-radius: 50%;
+    box-shadow: 0 0 30px aqua;
+}

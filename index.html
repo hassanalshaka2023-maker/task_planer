@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="vendors/bootstrap/css/style.css" />
+  <link rel="stylesheet" href="./css/digital-clock-style.css" />
+  <link rel="stylesheet" href="./css/word_limit_style.css" />
+  <link rel="stylesheet" href="/css/star_rating_style.css" />
+  <body>
+    <span id="miku">
+      <video width="360" height="360" autoplay muted loop playsinline>
+        <source src="video/crying-miku.mp4" type="video/mp4" />
+      </video>
+    </span>
+
+    <div class="digital-clock">
+      <h2>Digital Clock</h2>
+      <input type="time" id="alarm-time" name="alarm-time" step="1" />
+      <button id="set-alarm">Set Alarm</button>
+      <span id="clock"> </span>
+    </div>
+
+    <div class="container">
+      <textarea name="textarea" id="text" placeholder="Write..."></textarea>
+      <div class="counter" id="counter"><h3>280 characters remaining</h3></div>
+      <button id="btn">submit</button>
+    </div>
+    <div class="container">
+      <ul class="nav nav-tabs" id="myTab" role="tablist"></ul>
+
+      <div class="tab-content mt-3" id="myTabContent"></div>
+    </div>
+
+    <script src="./js/gravity.js"></script>
+    <script src="./vendors/bootstrap/js/main.js"></script>
+    <script src="/js/star_rating.js"></script>
+    <script src="./js/word_limit.js"></script>
+    <script src="./js/tabs.js"></script>
+    <script src="./js/digital-clock.js"></script>
+  </body>
+</html>
