@@ -51,6 +51,9 @@
     cursor: pointer;
     transition: 0.2s;
   }
+ 
+
+
 
   button:hover {
     background: #0ea5e9;

@@ -1,6 +1,8 @@
 let ALARM = "";
 const audio = new Audio("audio/miku_alarm.mp3");
-const audioBreak = new Audio("audio/broken-glass-sound-effect-high-quality.mp3");
+const audioBreak = new Audio(
+  "audio/broken-glass-sound-effect-high-quality.mp3",
+);
 
 const startTime = () => {
   const today = new Date();
@@ -12,10 +14,9 @@ const startTime = () => {
   document.getElementById("clock").innerHTML = time;
 
   if (time === ALARM) {
-    //  alert("😎 Alarm!");
-      soundEffect();
-      fall();
-
+    // alert("😎 Alarm!");
+    soundEffect();
+    fall();
   }
 
   setTimeout(startTime, 1000);
@@ -26,28 +27,27 @@ document.addEventListener("DOMContentLoaded", () => {
   setbtn.addEventListener("click", () => {
     const input = document.getElementById("alarm-time");
     ALARM = input.value;
+
+    setbtn.style.backgroundColor = "red";
+    setbtn.innerHTML = "Alarm Set!";
+
     console.log("Alarm set to:", ALARM);
   });
 
   startTime();
 });
 
+const soundEffect = async () => {
+  try {
+    const video = document.getElementById("miku");
+    await audioBreak.play();
 
-
-const soundEffect = async () =>{
-    try {
-        const video = document.getElementById('miku')
-        await audioBreak.play();
-
-        await new Promise((resolve) => {
-            audioBreak.onended = resolve;
-        });
-        video.style.display = " inline-flex";
-        await audio.play();
-        
-    } catch (error) {
-        console.error("Playback interrupted or blocked by browser:", error);
-    }
+    await new Promise((resolve) => {
+      audioBreak.onended = resolve;
+    });
+    video.style.display = " inline-flex";
+    await audio.play();
+  } catch (error) {
+    console.error("Playback interrupted or blocked by browser:", error);
+  }
 };
-
-
